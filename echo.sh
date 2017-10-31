@@ -1,19 +1,21 @@
 #!/bin/bash
 
-iphone="404找不到错误"
+iphone="iPhone X"
 echo ${iphone}
-exit 0
 
-age=100
-if(age > 100){
+dream="i have a dream"
+echo -e ${dream}
 
-exit 1
-}
+dream="i have \n a dream"
+echo -e ${dream}
 
+dream="i have \n a dream\c"
+echo -e ${dream}
 
+#输出当前时间
+echo `date`
 
-
-
-
+#-e 开启转义功能 换行时需要
+#\c 不换行
 
 
