@@ -43,6 +43,15 @@ name='i have a dream'
 tmp="have"
 #prefix=
 
+age=10
+name="${age}"
+echo $name
+
+name='${age}'
+echo $name
+
+name=${age}
+echo $name
 
 filepath="/Users/yangshaohong/Desktop/hello.sh"
 file=${filepath##*/}
