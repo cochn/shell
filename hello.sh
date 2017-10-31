@@ -9,6 +9,7 @@ echo $filepath
 
 echo $path
 
+#在当前脚本所在路径创建text.text文件
 echo `$(cd $(dirname $0); touch text.text)`
 
 
