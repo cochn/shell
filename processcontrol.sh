@@ -65,4 +65,71 @@ echo "a=7688"
 ;;
 esac
 
+i=1
+
+# 循环 条件为假时进入循环 跟while循环相反
+until [ $i -gt 1 ]
+do
+echo "$i <= 1"
+i=2
+done
+
+#跳出循环
+#break 后面默认跟1 跳出一层循环  break 2 跳出2层循环 。。。 2可以大于实际的循环层数
+for (( i = 0; i < 5; i++ ))
+
+do
+
+echo "当前的值:${i}"
+
+if [ $i -eq 2 ]
+then
+echo "跳出循环"
+break
+fi
+
+done
+
+#break跳出多层循环
+for ((i = 0; i < 5; i++))
+do
+
+for (( j = 0; j < 6; j++))
+do
+
+echo "第二层循环：${j}"
+
+if [ $j -eq 3 ]
+then
+echo "跳出循环"
+break 2
+fi
+
+done
+
+done
+
+#continue 跳出循环 跳出本次循环 跟oc c 一样
+for (( i = 0; i < 5; i++ ))
+do
+
+if [ $i -eq 2 ]
+then
+continue
+else
+echo "continue跳出循环:${i}"
+fi
+
+done
+
+
+
+
+
+
+
+
+
+
+
 

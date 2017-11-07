@@ -166,8 +166,8 @@ else
 echo "str1.length != 0"
 fi
 
-# -n 字符串长度不为0 返回true
-if [ -n $str2 ]
+# -n 字符串长度不为0 返回true -n后面必须写 "" 如果不写会一直为真
+if [ -n "${str2}" ]
 then
 echo "str2.length != 0"
 else
@@ -235,7 +235,7 @@ echo "${filePath} can not be readed"
 fi
 
 # -w file 检测file是否有写权限 有返回true
-if [ -r ${filePaht} ]
+if [ -r ${filePath} ]
 then
 echo "${filePath} can be writed"
 else
@@ -243,7 +243,7 @@ echo "${filePath} can not be writed"
 fi
 
 # -x file 检测file是否有执行权限 有返回true
-if [ -r ${filePaht} ]
+if [ -r ${filePath} ]
 then
 echo "${filePath} can be executed"
 else
